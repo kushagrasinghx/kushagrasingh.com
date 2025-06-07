@@ -20,14 +20,14 @@ function App() {
           </ul>
         </div>
       </nav>
-      <main className='grid grid-cols-2 min-h-screen bg-[url("/src/assets/background.svg")] bg-no-repeat bg-cover pt-18 px-34'>
+      <main className='grid grid-cols-2 min-h-screen bg-[url("/src/assets/background.svg")] bg-no-repeat bg-cover pt-18 px-34 gap-10'>
         <div className="left-side">
           <div className="left-side-content flex flex-col justify-center gap-10 py-15 h-full">
             <div className="pfp h-75 w-75 rounded-3xl bg-[url('/src/assets/434588151_755842176647990_4355885289299874595_n.jpg')] bg-cover bg-center"></div>
             <div className="about-txt flex flex-col gap-5">
               <div className="text flex flex-col gap-1">
                 <h1 className='text-xl font-medium'>Hello, I'm Kushagra! 👋</h1>
-                <p>I'm a passionate frontend developer and designer from India.</p>
+                <p>I'm a passionate <strong>frontend developer</strong> and <strong>designer</strong> from India.</p>
                 <div className="email text-gray-400 flex items-center gap-2"><Mail size={16}/> <p>contact@kushagrasingh.com</p></div>
               </div>
               <div className="live-stats">
@@ -40,7 +40,21 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="right-side"></div>
+        <div className="right-side my-10 bg-white/5 rounded-2xl p-10">
+          <div className="right-side-content">
+            <div className="section1 flex flex-col gap-5">
+              <h1 className='text-xl font-medium'>Experience</h1>
+              <div className="experience-item">
+                <ul className='flex justify-between gap-10'>
+                  <li><img src="/src/assets/logos/WpnMEF04Q0IKFyq098hI5VPlVFA.avif" alt="Company Logo" className="h-12 object-contain" /></li>
+                  <li><img src="/src/assets/logos/nextfrontwhite.png" alt="Company Logo" className="h-10 object-contain" /></li>
+                  <li><img src="/src/assets/logos/someonewhite.png" alt="Company Logo" className="h-10 object-contain" /></li>
+                </ul>
+                <p className='text-gray-400 text-justify'>As a front-end developer, UX Designer and Graphic Designer, I've worked with a variety of clients or as an intern to create beautiful and functional websites and designs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   )
