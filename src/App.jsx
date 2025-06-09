@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Mail, Instagram, Linkedin, Github } from 'lucide-react'
 import './App.css'
+import { Contact } from './components/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,7 +29,7 @@ function App() {
                 <p>I'm a passionate <strong>frontend developer</strong> and <strong>designer</strong> from India.</p>
                 <div className="email text-gray-400 flex items-center gap-2 text-sm">
                   <Mail size={16} />
-                  <p>contact@kushagrasingh.com</p>
+                  <a href="mailto:contact@kushagrasingh.com" className="hover:underline">contact@kushagrasingh.com</a>
                 </div>
               </div>
               <div className="live-stats">
@@ -57,7 +58,29 @@ function App() {
               <div className="section1 flex flex-col gap-2">
                 <h1 className="text-xl font-medium">Projects</h1>
                 <div className="project-item">
-                  <p className="text-gray-400 text-justify">Below are some of my featured projects — feel free to check out the rest on my GitHub profile.</p>
+                  <p className="text-gray-400 text-justify mb-5">Below are some of my featured projects — feel free to check out the rest on my GitHub profile.</p>
+                  <div className="project-list grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-white/5 rounded-xl p-4">
+                      <img src="/src/assets/projects/project1.jpg" alt="Project 1" className="w-full h-48 object-cover rounded-lg mb-4" />
+                      <h3 className="text-lg font-medium">SocialSense</h3>
+                      <p className="text-gray-400 text-sm"><strong className='text-white/75'>Product Designer</strong> Real-time post generation and insights for better engagement for LinkedIn.</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4">
+                      <img src="/src/assets/projects/project2.jpg" alt="Project 2" className="w-full h-48 object-cover rounded-lg mb-4" />
+                      <h3 className="text-lg font-medium">CalmZen</h3>
+                      <p className="text-gray-400 text-sm"><strong className='text-white/75'>UX Project</strong> Explore the world of inner peace of mind. A Healthy Meditaion Website.</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4">
+                      <img src="/src/assets/projects/project3.jpg" alt="Project 3" className="w-full h-48 object-cover rounded-lg mb-4" />
+                      <h3 className="text-lg font-medium">Positivus</h3>
+                      <p className="text-gray-400 text-sm"><strong className='text-white/75'>UX Project</strong> Description of project 3</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4">
+                      <img src="/src/assets/projects/project4.jpg" alt="Project 4" className="w-full h-48 object-cover rounded-lg mb-4" />
+                      <h3 className="text-lg font-medium">TEDxJUET 2025</h3>
+                      <p className="text-gray-400 text-sm"><strong className='text-white/75'>Designing Head</strong> Join inspiring speakers and over a hundred guests — from India</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -114,6 +137,7 @@ function App() {
                   <p className="text-gray-400 text-justify">
                     Feel free to contact me for any work or collaboration.
                   </p>
+                  <Contact />
                   <p>
                     You can contact me on my email or through my social media handles.
                   </p>
@@ -138,7 +162,13 @@ function App() {
               </div>
             </div>
           </div>
+
+          <div className="right-side-4 bg-white/5 rounded-2xl p-5 md:p-9">
+            <p className="text-center text-gray-400">© 2025 Kushagra Singh</p>
+          </div>
         </div>
+
+        
       </main>
     </>
   )
